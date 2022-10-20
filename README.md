@@ -54,6 +54,8 @@
 
 ![image](https://user-images.githubusercontent.com/58136226/196457353-50a476eb-68a5-402d-9d91-dac9154196f5.png)
 
+ПЕРЕЗАПУСКАЕМ Awakened PoE Trade
+
 Теперь поетрейд знает об игре и готов на неё смотреть. 
 
 # ИСПОЛЬЗОВАНИЕ ПРОГРАММЫ
