@@ -1,4 +1,5 @@
-﻿ctrld = ^d
+﻿CoordMode, Mouse, Screen
+ctrld = ^d
 altw = !w
 ctrlaltd = ^!d
 fd = {F1}
@@ -14,7 +15,7 @@ iniread, okn, %A_WorkingDir%\config.ini, one, okn
 if okn = 0
 {
     Gui, Add, Text, x47 y9 w170 h20 , Введите ОКОНЧАНИЕ ссылки
-    Gui, Add, Text, x32 y39 w130 h20 , http://dontpad.com/
+    Gui, Add, Text, x32 y39 w130 h20 , http://dontfile.com
     Gui, Add, Edit, x132 y39 w120 h20 vKey
     Gui, Add, Button, x82 y69 w100 h30 , Готово
     Gui, Show, x397 y207 h107 w269, GFNawakened
@@ -80,7 +81,9 @@ Zapros(comb)
         ImageSearch, ssilwide, ssiltop, 0,0, 1919, 1079,*70 %A_WorkingDir%\1.png
         if errorlevel = 0
         {
-            Click, %ssilwide%, %ssiltop%
+            Click, A_ScreenWidth/2, A_ScreenHeight/2
+            Click, A_ScreenWidth/2, A_ScreenHeight/2
+            Click, A_ScreenWidth/2, A_ScreenHeight/2
             Send {Ctrl down}
             Sleep 10
             Send, a
@@ -106,7 +109,9 @@ Zapros(comb)
     MouseMove, %xpos%, %ypos%
     Sleep, 2100
     request = % Getfrom()
-    response = % GetHTMLbyTag(request, "textarea")
+    StringSplit, word_array, request, "
+    response := % word_array6
+    StringReplace, response, response, \n,`n, All
     Send,% (comb)
     Sleep 100
     Send {Ctrl up}
@@ -117,29 +122,18 @@ Zapros(comb)
     Send {Ctrl up}
     Send {C up}
     Send {Alt up}
-    return
+return
 }
 
 Getfrom()
 {
-    url = http://dontpad.com/%key%
+    url = http://dontfile.com/%key%.json
     oHTTP:=ComObjCreate("WinHttp.WinHttpRequest.5.1")
     oHTTP.Open("Get", url , False)
     oHTTP.SetRequestHeader("Content-Type", "application/json")
     oHTTP.SetRequestHeader("X-Access-Key" , "SOMEKEYHERE")
     oHTTP.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
-    oHTTP.Send()
-    Return oHTTP.ResponseText
-}
-
-GetHTMLbyTag(HTMLSource, Tag, Occurrence=1, Format=0) {
-    ComError := ComObjError(false), `(oHTML := ComObjCreate("HtmlFile")).write(HTMLSource)
-    if (Format = 2) {
-        if (innerHTML := oHTML.getElementsByTagName(Tag)[Occurrence-1]["innerHTML"]) {
-            `(oDOM := ComObjCreate("HtmlFile")).write(innerHTML)
-            Return oDOM, ComObjError(ComError)
-        } else
-            Return "", ComObjError(ComError)
+        oHTTP.Send()
+        Return oHTTP.ResponseText
     }
-    return (result := oHTML.getElementsByTagName(Tag)[Occurrence-1][(Format ? "innerHTML" : "innerText")]) ? result : "", ComObjError(ComError)
-}
+
