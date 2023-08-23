@@ -26,6 +26,8 @@
 
 Жмём в окно ввода, что-бы появился курсор ввода. 
 
+![Awakened_PoE_Trade_J6e3Xys5gB](https://github.com/T1mecat/GFNawekened/assets/58136226/09f86a9c-f76e-4747-8f5e-5789805e6c80)
+
 Можно нажимать Shift + TAB и возвращаться в игру.
 
 
