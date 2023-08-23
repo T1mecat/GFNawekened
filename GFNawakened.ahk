@@ -1,22 +1,22 @@
-﻿CoordMode, Mouse, Screen
+﻿SetTitleMatchMode, 2
+CoordMode, Mouse, Screen
 ctrld = ^d
-altw = !w
+;altw = !w
 ctrlaltd = ^!d
 fd = {F1}
 fo = {F2}
 global key
 FileCreateDir, C:\Users\%UserName%\Documents\timecat\GFNawakened
 FileInstall, config.ini, C:\Users\%UserName%\Documents\timecat\GFNawakened\config.ini, 0
-FileInstall, 1.png, C:\Users\%UserName%\Documents\timecat\GFNawakened\1.png, 1
 SetWorkingDir, C:\Users\%UserName%\Documents\timecat\GFNawakened
 iniread, key, %A_WorkingDir%\config.ini, one, key
 iniread, okn, %A_WorkingDir%\config.ini, one, okn
 
+
 if okn = 0
 {
-    Gui, Add, Text, x47 y9 w170 h20 , Введите ОКОНЧАНИЕ ссылки
-    Gui, Add, Text, x32 y39 w130 h20 , http://dontfile.com
-    Gui, Add, Edit, x132 y39 w120 h20 vKey
+    Gui, Add, Text, x47 y9 w170 h20 , Введите название чата
+    Gui, Add, Edit, x82 y39 w120 h20 vKey
     Gui, Add, Button, x82 y69 w100 h30 , Готово
     Gui, Show, x397 y207 h107 w269, GFNawakened
     Return
@@ -42,8 +42,8 @@ return
 ~^!d::
     Zapros(ctrlaltd)
 return
-~!w::
-    Zapros(altw)
+;~!w::
+;    Zapros(altw)
 return
 ~F1::
     Zapros(fd)
@@ -54,19 +54,10 @@ return
 
 Zapros(comb)
 {
+    KeyWait Control
+    BlockInput On
     MouseGetPos, xpos, ypos
-    Send {Ctrl down}
-    Sleep 10
-    Send {Shift down}
-    Sleep 10
-    Send {Alt down}
-    Sleep 10
-    Send c
-    Send {Ctrl up}
-    Sleep 10
-    Send {Shift up}
-    Sleep 10
-    Send {Alt up}
+    Send {Ctrl down}{Shift down}{Alt down}{Sleep 10}c{Sleep 10}{Ctrl up}{Shift up}{Alt up}
     Sleep 25
     Send {Shift down}
     Sleep 50
@@ -76,28 +67,13 @@ Zapros(comb)
     Sleep 50
     Send {Shift up}
     Sleep 200
-    loop, 50
-    {
-        ImageSearch, ssilwide, ssiltop, 0,0, 1919, 1079,*70 %A_WorkingDir%\1.png
-        if errorlevel = 0
-        {
-            Click, A_ScreenWidth/2, A_ScreenHeight/2
-            Click, A_ScreenWidth/2, A_ScreenHeight/2
-            Click, A_ScreenWidth/2, A_ScreenHeight/2
-            Send {Ctrl down}
-            Sleep 10
-            Send, a
-            Sleep 10
-            Send {Ctrl up}
-            Send, {BackSpace}
-            Send {Ctrl down}
-            Sleep 10
-            Send, v
-            Sleep 10
-            Send {Ctrl up}
-            break
-        }
-    }
+    Send {Ctrl down}
+    Sleep 10
+    Send, v
+    Sleep 10
+    Send {Ctrl up}
+    Sleep 25
+    Send {Enter}
     Sleep 25
     Send {Shift down}
     Sleep 50
@@ -107,33 +83,29 @@ Zapros(comb)
     Sleep 50
     Send {Shift up}
     MouseMove, %xpos%, %ypos%
-    Sleep, 2100
-    request = % Getfrom()
-    StringSplit, word_array, request, "
-    response := % word_array6
-    StringReplace, response, response, \n,`n, All
+    BlockInput, off
+    Sleep 100
+    WinActivate, %key%
+    Send, {Ctrl down}a{Ctrl up}{sleep 20}{Ctrl down}{sleep 20}c{sleep 20}{Ctrl up}
+    pepe := % Clipboard
+    StringReplace, pepe, pepe, Класс,ª, All
+    StringSplit, qq, pepe, ª
+    pepe2 := qq%qq0%
+    StringReplace, pepe2, pepe2,%A_Space%предмета:,Класс предмета:, All
+    StringReplace, pepe2, pepe2, Найти по имени,ª, All
+    StringSplit, ww, pepe2, ª
+    WinActivate, GeForce NOW
+    request = %ww1%
     Send,% (comb)
     Sleep 100
     Send {Ctrl up}
     Send {C up}
     Send {Alt up}
-    clipboard = %response%
+    clipboard = %request%
     Sleep 20
     Send {Ctrl up}
     Send {C up}
     Send {Alt up}
 return
 }
-
-Getfrom()
-{
-    url = http://dontfile.com/%key%.json
-    oHTTP:=ComObjCreate("WinHttp.WinHttpRequest.5.1")
-    oHTTP.Open("Get", url , False)
-    oHTTP.SetRequestHeader("Content-Type", "application/json")
-    oHTTP.SetRequestHeader("X-Access-Key" , "SOMEKEYHERE")
-    oHTTP.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
-        oHTTP.Send()
-        Return oHTTP.ResponseText
-    }
 
