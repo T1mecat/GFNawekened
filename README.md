@@ -84,9 +84,9 @@
 
 ![Awakened_PoE_Trade_xlrZFFkvZ4](https://user-images.githubusercontent.com/58136226/197243728-ac572176-cb5c-4792-9af9-d76cc840dada.png)
 
-#GFNawed
 
-##Guide in English
+
+## Guide in English
 
 # Kittens, everything works.
 
