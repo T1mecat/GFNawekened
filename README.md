@@ -158,7 +158,7 @@ All functions listed here work.
 
 # USING THE PROGRAM
 
-After preparation, download the .exe file from the latest release of the program: https://github.com/T1mecat/GFNawekened/releases
+After preparation, download the GFNawakenedENG.exe file from the latest release of the program: https://github.com/T1mecat/GFNawekened/releases
 
 The browser and Windows will warn, but they also warn at Poetrade, and for peace of mind I am attaching a link to virustotal: https://www.virustotal.com/gui/url/0af3b5691a6b93571cff0dac08d1bbb253daabff82ff0f7ec728f21a170f870e
 
