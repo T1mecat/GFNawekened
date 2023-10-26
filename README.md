@@ -1,5 +1,7 @@
 # GFNawekened
 
+## Guide in English https://github.com/T1mecat/GFNawekened/blob/main/README.md#guide-in-english
+
 # Котятки, всё работает. 
 
 Позволяет изспользовать Awakened PoE Trade, https://github.com/SnosMe/awakened-poe-trade через GeForce NOW.
