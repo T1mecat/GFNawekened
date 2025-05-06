@@ -2,16 +2,126 @@
 
 ## Guide in English https://github.com/T1mecat/GFNawekened/blob/main/README.md#guide-in-english
 
-# Котятки, всё работает. 
+# Работает для PoE и PoE2. 
 
-Позволяет изспользовать Awakened PoE Trade, https://github.com/SnosMe/awakened-poe-trade через GeForce NOW.
+Позволяет изспользовать Awakened PoE Trade, https://github.com/SnosMe/awakened-poe-trade и Exiled Exchange 2, https://github.com/Kvan7/Exiled-Exchange-2 через GeForce NOW.
 
-Реализовано большинство функций, не работают всякие сортировки и я пока не придумал, как могу это поправить. Но все оценщиики и проверяльщики - к вашим услугам.
+Реализовано большинство функций, не работают сортировки и я пока не придумал, как могу это поправить. Но все оценщиики и проверяльщики - к вашим услугам.
 
 Перед использованием нужно сделать всего два шага. Ниже всё показано и рассказано <3
 
-Дискорд для вопросов и помощи: https://discord.gg/geforcenowrussia
+Связь для вопросов и помощи:
+Telegram: @T1mecat
+Telegram GFN.AM: https://t.me/+sa5blqAbTXxkM2U6
+Discord: timecat_
+Discord GFN.AM: https://discord.gg/8jfJtHMWEs
 
+# Установка и использование
+
+Используем Steam версию PoE2. В других версиях работать не будет. 
+![image](https://github.com/user-attachments/assets/462c9daf-6a34-4335-91e6-2bde3be66882)
+
+Скачиваем и устанавливаем Exiled Exchange 2 https://kvan7.github.io/Exiled-Exchange-2/download
+![image](https://github.com/user-attachments/assets/0a619962-7eb7-47c8-a0f0-a3a4fc7dcb30)
+
+Скачиваем GFNawekened 
+![image](https://github.com/user-attachments/assets/7ee3ad53-89a8-4e9f-80c4-0c00416e60f7)
+
+Открываем Exiled Exchange 2
+
+В трее (стрелочка справа внизу) находим запущенный Exiled Exchange 2. Нажимаем по нему правой кнопкой мыши и "Open in Browser"
+![image](https://github.com/user-attachments/assets/a170c752-5c78-44c8-a84c-05602c3bb25d)
+
+Тут, 
+Шестерёнка > General > Меняем язык на русский > Сохраняем
+![image](https://github.com/user-attachments/assets/a7f6c9a4-c180-417f-bbf6-ae99c54c0194)
+![image](https://github.com/user-attachments/assets/12ae0ff1-1ac9-44a0-a937-9b3b9db4c682)
+![image](https://github.com/user-attachments/assets/143ac141-8815-47eb-a86d-3603daf6529e)
+![image](https://github.com/user-attachments/assets/8d1e6749-0dec-4466-8967-c57442cbd125)
+
+Возвращаемся в трей, но теперь нажимаем "Open config folder". Если ничего не происходит, закрываем Exiled Exchange 2 кнопкой "Quit", открываем его ещё раз и пробуцем снова. 
+![image](https://github.com/user-attachments/assets/339c3a08-2ccb-4e9a-94e5-f39ae492d23c)
+
+В отрывшейся папке будет один файл config.json. Открываем его блокнотом. 
+![image](https://github.com/user-attachments/assets/422ca4e5-c58d-4a25-9acc-40191244723e)
+
+Нажимаем Ctrl + F и ищем Path of Exile 2
+![image](https://github.com/user-attachments/assets/cd4f9d4e-1097-442d-90d8-7335a3c5972f)
+
+Заменяем на Path of Exile 2 в GeForce NOW
+![image](https://github.com/user-attachments/assets/cbe7553f-a93a-4377-bd5b-e22b69fd9482)
+
+Сохраняем, закрываем.
+![image](https://github.com/user-attachments/assets/884c0f9c-919d-411f-9c10-d4e166bbb7c7)
+
+ПЕРЕЗАПУСКАЕМ Exiled Exchange 2. (Правой кнопкой мыши по нему в трее, "Quit" и открываем снова.)
+![image](https://github.com/user-attachments/assets/a79b6627-e1f9-44d2-aabf-9912bca5e07c)
+
+Открываем PoE2 в GeForce NOW. В игре нажимаем Shift + Tab. (Если вы сменили комбинацию вызова Steam, возвращайте её обратно, она вам нужна.)
+
+Заходим в Друзья > Плюсик в групповых чатах > Создаём чат с названием tradechat (можно с любым, это просто мой совет) > Нажимаем на окно ввода текста, что бы в нём можно было печатать (сами ничего не пишем). > Нажимаем Shift + Tab что бы вернуться в игру.
+![image](https://github.com/user-attachments/assets/8f5f8d27-1c1c-4c8c-9847-00e94a875190)
+![image](https://github.com/user-attachments/assets/afa84698-5c58-42d3-9d9e-8d4ad81cceaa)
+![image](https://github.com/user-attachments/assets/1b245ee8-ffbe-4bc4-838a-a0e0f67adfd3)
+![image](https://github.com/user-attachments/assets/f025c55f-4a78-413a-b52e-856b8943b3eb)
+
+НА СВОЁМ КОМПЬЮТЕРЕ Переходим по ссылке https://steamcommunity.com/chat/ 
+Она откроет чаты в вашем Steam аккаунте прямо в браузере.
+
+Выбираем только что созданный чат 
+![image](https://github.com/user-attachments/assets/a7474a08-27ec-41dd-a7ac-4ce545ddf619)
+
+Делаем это окно браузера отдельным (просто потащите его) и уменьшаем, что бы оно не мешалось. 
+![image](https://github.com/user-attachments/assets/157f1e9a-5fcf-452e-8a6e-0d5aa83b84ce)
+
+Нажимаем в середину окна (как на скриншоте) и можно переходить к следующему шагу. Это окно просто не трогаем, оно будет жить само по себе. 
+![image](https://github.com/user-attachments/assets/3b098b1d-9708-4d28-b3f2-473513df5d06)
+
+Открываем GFNawekened.
+В единственное доступное поле вводим название созданного чата
+Нажимаем "Готово"
+![image](https://github.com/user-attachments/assets/cfded197-ef1c-4312-a480-507ae0f4c0c5)
+
+Переходим обратно в игру, наводим на нужный предмет и нажимаем одну из этих кобинаций.
+![image](https://github.com/user-attachments/assets/e953b469-c033-451f-b822-3ef11a550767)
+
+Происходит секунда магии и всё работает. 
+![image](https://github.com/user-attachments/assets/c5abaca8-1463-4a91-aac5-569bd39d5625)
+
+
+# РАСПРОСТРАНЕННЫЕ ПРОБЛЕМЫ
+
+В GeForce NOW игра должна быть запущена через Steam. 
+Оверлей стима должен открываться по Shift + Tab
+Название открытого чата должно соответствовать выбранному в GFNawekened и открытому на компьютере. 
+В окне чата должно быть выделено поле для ввода текста
+Выглядеть это должно примерно так
+![image](https://github.com/user-attachments/assets/75ff74e9-cd4d-450a-96a4-dd4ca5149d91)
+
+В конфиге Exiled Exchange 2 должно быть укащано правильное название игры (смотри гайд выше)
+Exiled Exchange 2 должен быть перезапущен после изменения конфига (единоразовая процедура)
+Проверить, работает ли эта часть обхода, можно нажав Shift + Space в запущенной игре. Должен открыться Exiled Exchange 2.
+
+Чат в Steam должен быть открыт в отдельном окне браузера
+В этом чате не должно быть активным окно ввода текста. Нужно нажать просто в середину окна. 
+Проверить, всё ли нормально с этим чатом, можно нажав Ctrl + A. Это выделит текст во всём окне и будет выглядеть примерно так 
+![image](https://github.com/user-attachments/assets/67b16330-44ff-4711-9dd3-d93fd8f983ad)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Эта часть гайда для первой части PoE.
 
 # ПОДГОТОВКА STEAM
 
