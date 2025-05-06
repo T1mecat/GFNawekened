@@ -24,7 +24,7 @@ Discord GFN.AM: https://discord.gg/8jfJtHMWEs
 Скачиваем и устанавливаем Exiled Exchange 2 https://kvan7.github.io/Exiled-Exchange-2/download
 ![image](https://github.com/user-attachments/assets/0a619962-7eb7-47c8-a0f0-a3a4fc7dcb30)
 
-Скачиваем GFNawekened 
+Скачиваем GFNawekened https://github.com/T1mecat/GFNawekened/releases/tag/0.4
 ![image](https://github.com/user-attachments/assets/7ee3ad53-89a8-4e9f-80c4-0c00416e60f7)
 
 Открываем Exiled Exchange 2
